@@ -1,0 +1,23 @@
+name: Skippable workflow
+
+on:
+  # Runs on PR merge
+  push:
+    branches:
+      - master
+      - main
+  # Runs on PR: open, reopened, updated
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  job-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1
+        run: |
+          echo 'this is step 1'
+
+      - name: Step 2
+        run: |
+          echo 'this is step 1'
