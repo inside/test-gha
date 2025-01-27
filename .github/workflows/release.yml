@@ -14,6 +14,11 @@ jobs:
   job-1:
     runs-on: ubuntu-latest
     steps:
+      - name: Skip checks and still be mergeable
+        id: skip-checks
+        run: |
+          exit 0
+
       - name: Step 1
         run: |
           echo 'this is step 1'
