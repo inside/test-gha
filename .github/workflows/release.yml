@@ -12,6 +12,7 @@ on:
 
 jobs:
   job-1:
+    if: false
     runs-on: ubuntu-latest
     steps:
       - name: Skip checks and still be mergeable
