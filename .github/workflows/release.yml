@@ -12,6 +12,7 @@ on:
 
 jobs:
   job-1:
+    # Bypassing this mandatory check should still allow a merge
     if: false
     runs-on: ubuntu-latest
     steps:
