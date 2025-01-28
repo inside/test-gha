@@ -1,3 +1,3 @@
 # test-gha
 
-Lol
+Lol 2

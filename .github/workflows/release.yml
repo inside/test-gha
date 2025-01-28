@@ -12,17 +12,25 @@ on:
 
 jobs:
   job-1:
+    # Bypassing this mandatory check should still allow a merge
+    if: false
     runs-on: ubuntu-latest
     steps:
-      - name: Skip checks and still be mergeable
-        id: skip-checks
-        run: |
-          exit 0
-
       - name: Step 1
         run: |
-          echo 'this is step 1'
+          echo 'this is step 1 from job-1'
 
       - name: Step 2
         run: |
-          echo 'this is step 1'
+          echo 'this is step 2 from job-1'
+  job-2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1
+        run: |
+          echo 'this is step 1 from job-2'
+          exit 1
+
+      - name: Step 2
+        run: |
+          echo 'this is step 2 from job-2'
