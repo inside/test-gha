@@ -29,6 +29,7 @@ jobs:
       - name: Step 1
         run: |
           echo 'this is step 1 from job-2'
+          exit 1
 
       - name: Step 2
         run: |
